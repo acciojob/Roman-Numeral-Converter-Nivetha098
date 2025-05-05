@@ -1,11 +1,15 @@
 function convertToRoman(num) {
     const obj = [
         ['M', 1000], 
+        ['CM', 900], 
         ['D', 500], 
+        ['CD', 400],
         ['C', 100], 
-        ['L', 50], 
+        ['LX', 50], 
         ['X', 10], 
+        ['IX', 9],
         ['V', 5], 
+        ['IV', 4],
         ['I', 1]
     ];
 
@@ -24,3 +28,10 @@ function convertToRoman(num) {
 
     return result; // Return the final Roman numeral
 }
+
+// You can test your code by running the above function and printing it to console
+console.log(convertToRoman(36)); // Output: XXXVI
+console.log(convertToRoman(4)); // Output: IV
+console.log(convertToRoman(9)); // Output: IX
+console.log(convertToRoman(14)); // Output: XIV
+console.log(convertToRoman(798)); // Output: DCCXCVIII
