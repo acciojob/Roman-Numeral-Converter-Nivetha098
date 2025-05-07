@@ -1,4 +1,5 @@
 function convertToRoman(num) {
+    function convertToRoman(num) {
     const obj = [
         ['M', 1000], 
         ['CM', 900], 
@@ -13,6 +14,28 @@ function convertToRoman(num) {
         ['I', 1]
     ];
 
+    let result = '';
+
+    // Loop through each symbol/value pair
+    for (let i = 0; i < obj.length; i++) {
+        const [symbol, value] = obj[i];
+
+        // While the number is greater than or equal to the value
+        while (num >= value) {
+            result += symbol; // Append the symbol
+            num -= value; // Reduce the number
+        }
+    }
+
+    return result; // Return the final Roman numeral
+}
+
+// You can test your code by running the above function and printing it to console
+console.log(convertToRoman(36)); // Output: XXXVI
+console.log(convertToRoman(4)); // Output: IV
+console.log(convertToRoman(9)); // Output: IX
+console.log(convertToRoman(14)); // Output: XIV
+console.log(convertToRoman(798)); // Output: DCCXCVIII
     let result = '';
 
     // Loop through each symbol/value pair
